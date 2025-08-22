@@ -17,8 +17,7 @@ class EnhanceServices:
 
         filename = os.path.basename(filepath)
 
-        parent_dir = os.path.dirname(filepath)
-        output_path = os.path.join(parent_dir, f"enh_{filename}")
+        output_path = os.path.join("processed_videos", f"enh_{filename}")
 
         # Step 1: Extract frames
         if os.path.exists(ENHANCED_FRAMES_DIR) and len(os.listdir(ENHANCED_FRAMES_DIR)) and len(os.listdir(FRAMES_DIR)):
